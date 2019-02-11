@@ -1,0 +1,50 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    margin: 0;
+    height: 100%;
+}
+.invisible {
+    visibility: hidden;
+}
+#content {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 5%;
+    color: #7a7676;
+}
+#myform, #upper-form, .item {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}
+#subtotal, #total {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    text-align: right;
+}
+#summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+#from-to, #logo-date, .form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+h1{
+    text-align: center;
+}
+#add-item {
+    width: 100%;
+}
