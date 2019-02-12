@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clients Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div id="logo">
+                <a href="invoiceCreator.html">logo</a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <h1>Create new Client</h1>
+
+        <div class="formulage">
+            <form class="form">
+                <fieldset>
+                    <legend>New client information</legend>
+                    <div class="info_row">
+                        <div class="input_title">
+                            <label for="name">Client Name</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="name" name="client_name" placeholder="Enter clients name...">
+                        </div>
+                    </div>
+                    <div class="info_row">
+                        <div class="input_title">
+                            <label for="surname">Client Surname</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="surname" name="client_surname" placeholder="Enter clients surname...">
+                        </div>
+                    </div>
+                    <div class="info_row">
+                        <div class="input_title">
+                            <label for="account_number">Account numer</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="acc_number" name="account_number" placeholder="Clients account number...">
+                        </div>
+                    </div>
+                    <div class="info_row">
+                        <div class="input_title">
+                            <label for="client_adress">Clients Adress</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="adress" name="client_adress" placeholder="Enter clients adress...">
+                        </div>
+                    </div>
+                    <div class="info_row">
+                        <div class="input_title">
+                            <label for="client_company">Clients company</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="company" name="client_company" placeholder="Enter clients company...">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
