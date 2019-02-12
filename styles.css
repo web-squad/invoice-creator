@@ -48,3 +48,10 @@ h1{
 #add-item {
     width: 100%;
 }
+
+footer {
+    text-align: center;
+    color: #7a7676;
+    padding-bottom: 44px;
+    padding-top: 44px;
+}
