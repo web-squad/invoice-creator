@@ -9,7 +9,41 @@ body {
     letter-spacing: 0.1em;
     margin: 0;
     height: 100%;
+    color: #6d6e71;
 }
+#logo {
+    text-align: center;
+    padding: 2%;
+}
+header {
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+#main-nav {
+    display: flex;
+    justify-content: center;
+    padding: 2%;   
+}
+#main-nav a {
+    font-weight: bold;
+}
+#main-nav div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    width: 60%;
+}
+a {
+    color: #6d6e71;
+}
+a:hover {
+    color: #6d6e7193;
+}
+button #e78200
+frame #6d6e71
 .invisible {
     visibility: hidden;
 }
@@ -18,6 +52,7 @@ body {
     flex-direction: column;
     margin: 0% 5%;
     color: #7a7676;
+    margin-top: 2%;
 }
 #myform, #upper-form, .item {
     display: flex;
@@ -47,4 +82,15 @@ h1{
 }
 #add-item {
     width: 100%;
+}
+#add-new {
+    text-align: center;
+    padding: 1%;
+    background-color: #e78200;
+}
+#add-new:hover {
+    background-color: #e783009d;
+}
+#add-new {
+    color: whitesmoke;
 }

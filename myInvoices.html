@@ -7,20 +7,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invoice Creator</title>
+    <title>My Invoices</title>
 </head>
 
 <body>
-
+ 
     <header>
         <div class="header">
             <div id="logo">
-                <a href="invoiceCreator.html">logo</a>
+                <a href="home.html"><img src="logo1.png" alt="logo"></a>
+            </div>
+            <div id="main-nav">
+                <div>
+                        <a href="myInvoices.html">My Invoices</a>
+                        <a href="newInvoice.html">New Invoice</a>
+                        <a class="active" href="clients.html">Clients</a>
+                        <a href="aboutUs.html">About Us</a>
+                </div>
+                
             </div>
     </header>
 
     <div id="content">
-        <h1>Invoice Creator</h1>
+        <h1>My Invoices</h1>
         <div id="content" style="overflow-x:auto;">
             <table>
                 <tr class="table-top">
@@ -57,7 +66,7 @@
                 </tr>
 
             </table>
-            <button class="button" id="save" type="button">Add New Invoice</button>
+            <a href="newInvoice.html" id="add-new">Add New Invoice</a>
         </div>
 
     </div>
