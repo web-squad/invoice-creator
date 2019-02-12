@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clients Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div id="logo">
+                <a href="invoiceCreator.html">logo</a>
+            </div>
+    </header>
+
+    <div id="content">
+        <h1>Clients</h1>
+        <div id = "content" style="overflow-x: auto">
+            <table>
+                <tr class="table-title">
+                    <th class="table-title">Id</th>
+                    <th class="table-title">Name</th>
+                    <th class="table-title">Surname</th>
+                    <th class="table-title">Account number</th>
+                    <th class="table-title">Adress</th>
+                    <th class="table-title">Company</th>
+                    <th class="table-title"></th>
+                    <th class="table-title"></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Tomasz</td>
+                    <td>Calik</td>
+                    <td>4597120189960000002145</td>
+                    <td><p>Opolska st. <br>Cracow</p></td>
+                    <td>Delphi</td>
+                    <td><button class="glyphicon glyphicon-pencil" id="edit" type="button"></button></td>
+                    <td><button class="glyphicon glyphicon-trash" id="delete" type="button"></button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Konrad</td>
+                    <td>Combik</td>
+                    <td>1648952712030000001586</td>
+                    <td><p>Wrocławska st. <br>Cracow</p></td>
+                    <td>Vavelo</td>
+                    <td><button class="glyphicon glyphicon-pencil" id="edit" type="button"></button></td>
+                    <td><button class="glyphicon glyphicon-trash" id="delete" type="button"></button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Michał</td>
+                    <td>Orio</td>
+                    <td>4598703561560000002856/td>
+                    <td><p>Krakowska 5 st. <br>Cracow</p></td>
+                    <td>Onet.pl</td>
+                    <td><button class="glyphicon glyphicon-pencil" id="edit" type="button"></button></td>
+                    <td><button class="glyphicon glyphicon-trash" id="delete" type="button"></button></td>
+                </tr>
+            </table>
+            <button class="button" id="addClient" type="button">Add New Client</button>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>
