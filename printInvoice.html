@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="invoice.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/invoiceTemplate.js"></script>
+    <title>Invoice Template</title>
+</head>
+<body>
+    <h1>Print Invoice</h1> 
+    <!-- heading to delete !!! -->
+
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td collspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <img src="logo1.png">
+                            </td>
+    
+                            <td id="invoice-number">
+                                Invoice #: ___ <br>
+                                Created: _____ <br>
+                                Due: ______
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+    
+            <tr class="information">
+                <td collspan="2">
+                    <table>
+                        <tr>
+                            <td id="customer">
+                                _____________<br>
+                                _____________<br>
+                                __________________
+                            </td>
+    
+                            <td id="supplier">
+                                _____________<br>
+                                _____________<br>
+                                _____________
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+    
+            <tr class="heading">
+                <td>
+                    Payment Method
+                </td>
+    
+                <td>
+                    check #
+                </td>
+            </tr>
+    
+            <tr class="details">
+                <td>
+                    check
+                </td>
+    
+                <td>
+                    1000
+                </td>
+            </tr>
+    
+            <tr class="heading">
+                <td>
+                    Item
+                </td>
+    
+                <td>
+                    Price
+                </td>
+            </tr>
+    
+            <tr class="item">
+                <td>
+                    Website design
+                </td>
+    
+                <td>
+                    $300.00
+                </td>
+            </tr>
+    
+            <!-- <tr class="item">
+                <td>
+                    Hosting (3 months)
+                </td>
+    
+                <td>
+                    $75.00
+                </td>
+            </tr> -->
+    
+            <tr class="item last">
+                <td>
+                    Domain name (1 year)
+                </td>
+    
+                <td>
+                    $10.00
+                </td>
+            </tr>
+            <tr class="total">
+                <td></td>
+    
+                <td>
+                    Total: $385.00
+                </td>
+            </tr>
+    
+        </table>
+</body>
+</html>
