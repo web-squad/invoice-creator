@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="script.js"></script>
+    <script src="js/newInvoice.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Invoice</title>
 </head>
@@ -60,12 +60,12 @@
                         </div>
                         <div class="form-group">
                                 <label for="price">Price</label>
-                                <input id="price" onchange="calculateTotal()"></input>
+                                <input id="price"></input>
+
                         </div>
                         <div class="form-group">
                             <label for="add-tax">Tax</label>
                             <input type="text" id="add-tax" value="23%"></input>
-                            <!-- <button class="button" id="add-tax" type="button">Add A Tax</button> -->
                         </div>
                         <div class="form-group">
                             <label class="invisible">" "</label>
@@ -96,69 +96,18 @@
 
             </form>
 
-            <button class="button" id="save" type="button" onclick="saveInvoice()">Save Invoice</button>
+            <button class="button" id="save" type="button">Save Invoice</button>
             <button class="button" id="add" type="button">Print Invoice</button>
 
         </div>
 
     </div>
     <footer></footer>
-
-    <script>
-        function calculateTotal() {
-            let price = document.getElementById("price").value;
-            let amount = document.getElementById("amount").value;
-            //let tax = document.getElementById("add-tax").value;
-            let result = price * amount;
-            document.getElementById("subtotal-amount").innerHTML = result;
-            //dodac obliczanie tax (Total)
-        }
-        
-        function saveInvoice() {
-            if (JSON.parse(localStorage.getItem("invoices")) === null ) {
-                let invoices = new Array();
-                localStorage.setItem("invoices", JSON.stringify(invoices));
-            }
-
-            let invoices = JSON.parse(localStorage.getItem("invoices"));
-                        
-            let from = document.getElementById("from").value;
-            let billTo = document.getElementById("to").value;
-            //let logo =  document.getElementById("upload-logo").value;
-            let invoiceDate = new Date();
-            let termsAndConditions = document.getElementById("t&c").value;
-            
-            let items = new Array();
-            let description = document.getElementById("description").value;
-            let amount = document.getElementById("amount").value;
-            let price = document.getElementById("price").value;
-            let tax = document.getElementById("add-tax").value;
-            let item = {
-                description,
-                amount,
-                price,
-                tax,
-            }
-            items.push(item);
-
-            let invoice = {
-                from,
-                billTo,
-                //logo,
-                invoiceDate,
-                items,
-                termsAndConditions
-            }
-            invoices.push(invoice);
-
-            localStorage.setItem("invoices", JSON.stringify(invoices));
-            
-        }
-
-    </script>
     
-    <!-- DO GENEROWANIA PDF: -->
-    <!-- var doc = new jsPDF();
+    
+    
+    <!-- DO GENEROWANIA PDF:
+    var doc = new jsPDF();
     doc.text('Hello world!', 10, 10);
     doc.save('a4.pdf');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script> -->
