@@ -96,8 +96,14 @@ label {
 input {
     padding: 5%;
 }
-
-
+input,textarea {
+    width:100%;
+    display:block;
+}
+#item-area {
+    display: flex;
+    flex-wrap: nowrap;
+}
 #from-to, #logo-date, .form-group {
     display: flex;
     flex-direction: column;
@@ -142,7 +148,7 @@ footer {
     width: 70%;
     margin: auto;
     z-index: 10;
-    background-color: red;
+    background-color: whitesmoke;
     display: none;
 }
 img {
@@ -182,6 +188,8 @@ img {
 #summary {
     font-weight: 800;
 }
+button:focus {outline:0;}
+
 
 
 
