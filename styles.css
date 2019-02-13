@@ -55,7 +55,6 @@ p {
     width: 80%;
     text-align: justify;
 }
-
 .invisible {
     visibility: hidden;
 }
@@ -70,60 +69,6 @@ p {
 #content {
     padding: 2%;
 }
-input, textarea {
-    border: none;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-}
-label {
-    color: #535353;
-    padding: 10px;
-}
-#item-area {
-    background-color: rgb(253, 210, 146);
-}
-#myform, #upper-form, .item {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2%;
-}
-#logo-date {
-    margin-top: 5%;
-}
-#subtotal, #total {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    text-align: right;
-}
-#summary {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-input {
-    padding: 5%;
-}
-input,textarea {
-    width:100%;
-    display:block;
-}
-#item-area {
-    display: flex;
-    flex-wrap: nowrap;
-}
-#from-to, #logo-date, .form-group {
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-}
-
-#add-item {
-    width: 100%;
-}
 #add-new {
     cursor: pointer;
     border: none;
@@ -137,41 +82,14 @@ input,textarea {
 #add-new-button {
     margin: auto;
 }
-
 #add-new:hover {
     background-color: #e7830080;
 }
 #add-new {
     color: whitesmoke;
 }
-#logo-gallery {
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2%;  
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 70%;
-    margin: auto;
-    z-index: 10;
-    background-color: whitesmoke;
-    display: none;
-}
 img {
     cursor: pointer;
-}
-#cover{
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(0,0,0,0.6);
-    z-index:5;
-    width:100%;
-    height:100%;
-    display: none;
 }
 .button {
     cursor: pointer;
@@ -200,9 +118,6 @@ img {
 }
 button:focus {
     outline:0;
-}
-#summary {
-    font-weight: 800;
 }
 footer {
     padding: 1%;
