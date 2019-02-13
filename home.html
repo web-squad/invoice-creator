@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesHome.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,29 +16,33 @@
     <header>
         <div class="header">
             <div id="logo">
-                <a href="home.html">logo</a>
+                <a href="home.html"><img src="logo1.png" alt="logo"></a>
             </div>
-        </div>
+            <div id="main-nav">
+                <a class="active" href="home.html">Home</a>
+                <a href="myInvoices.html">My Invoices</a>
+                <a href="newInvoice.html">New Invoice</a>
+                <a href="clients.html">Clients</a>
+                <a href="aboutUs.html">About Us</a>
+            </div>
     </header>
 
-    <div id="content">
+    <div id="content-home" id="content">
         <h1>Your best Invoice Creator!</h1>
-        
-        <div>
-            <h2>Invoice creator</h2>
+
+        <div id="welcome-part">
             <h3>Make your invoice fast and online</h3>
-            
-            <p>Welcome to original Invoice creator. You can save your regular costumer data and easly organize your invoices. Invoce creator lets you to print your invoice to PDF and download.</p>
 
-            <a href="invoiceCreator.html">Create your first invoice!</a>
-
+            <p>Welcome to original Invoice creator. You can save your regular costumer data and easly organize your
+                invoices. Invoce creator lets you to print your invoice to PDF and download.</p>
+        </div>
+        <div id="add-new-button">
+            <a href="newInvoice.html" id="add-new">Create your first invoice!</a>
         </div>
 
     </div>
     <footer>
-        <div>
-            <p>&copy;Powerd by: -> webDevSquad &lt-</p>
-        </div>
+        <p>&copy;Powerd by: webDevSquad</p>
     </footer>
 </body>
 

@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5% 0%;
+    margin-bottom: 9%;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: none;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+}
+#myIvoices-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 5%;
+    margin-top: 2%;
+    background-color: #F3C47F;
+    border-radius: 1%;
+    height:80vh;
+    width: auto;
+    padding: 2%;
+}
