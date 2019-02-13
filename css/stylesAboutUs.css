@@ -4,9 +4,7 @@
     margin: 0% 5%;
     margin-top: 2%;
     padding: 2%;
-    background-color: #F3C47F;
-    border-radius: 1%;
-
+    background-color: white;
 }
 h3 {
     padding: 2%;
@@ -16,23 +14,18 @@ h3 {
     padding: 2%;
 }
 
-#img-descr {
-    width: 50%;
-} 
-
-
 #about-us-descr {
-    width: 40%;
+    width: 35%;
 }
 #about-us-img {
-    width: 50%;
+    width: 60%;
 }
 
 
-#about-us-container, #contact-us-container {
+#about-us-container {
     display: flex;
     justify-content: space-between;
-    margin: 5vw;
+    padding-top: 5%;
 }
 
 
