@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="script.js"></script>
+    <script src="js/newInvoice.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Invoice</title>
 </head>
@@ -18,13 +18,10 @@
                 <a href="home.html"><img src="logo1.png" alt="logo"></a>
             </div>
             <div id="main-nav">
-                <div>
-                    <a href="myInvoices.html">My Invoices</a>
-                    <a href="newInvoice.html">New Invoice</a>
-                    <a class="active" href="clients.html">Clients</a>
-                    <a href="aboutUs.html">About Us</a>
-                </div>
-
+                <a href="myInvoices.html">My Invoices</a>
+                <a href="newInvoice.html">New Invoice</a>
+                <a class="active" href="clients.html">Clients</a>
+                <a href="aboutUs.html">About Us</a>
             </div>
     </header>
 
@@ -39,11 +36,11 @@
                     <div id="from-to">
                         <div class="form-group">
                             <label for="from">From</label>
-                            <textarea rows="10" cols="50" id="from"></textarea>
+                            <textarea rows="8" cols="90" id="from"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="to">Bill To</label>
-                            <textarea rows="10" cols="50" id="to"></textarea>
+                            <textarea rows="8" cols="90" id="to"></textarea>
                         </div>
                     </div>
 
@@ -58,18 +55,23 @@
 
 
                 <div id="lower-form">
-                    <div class="item">
+                    <div class="item" id="item-area">
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea rows="10" cols="30" id="description"></textarea>
+                            <textarea rows="8" cols="50" id="description"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="amount">Amount</label>
                             <input id="amount"></input>
                         </div>
                         <div class="form-group">
+                                <label for="price">Price</label>
+                                <input id="price"></input>
+
+                        </div>
+                        <div class="form-group">
                             <label for="add-tax">Tax</label>
-                            <button class="button" id="add-tax" type="button">Add A Tax</button>
+                            <input type="text" id="add-tax" value="23%"></input>
                         </div>
                         <div class="form-group">
                             <label class="invisible">" "</label>
@@ -99,18 +101,39 @@
                 </div>
 
             </form>
+            <div id="sp-buttons">
+                <button class="button" id="save" type="button">Save Invoice</button>
+                <button class="button" id="add" type="button">Print Invoice</button>
+            </div>
 
-            <button class="button" id="save" type="button">Save Invoice</button>
-            <button class="button" id="add" type="button">Print Invoice</button>
 
         </div>
         <div id="logo-gallery">
+            <img id="l1" onclick="showSrc(this);" class="logo-to-get" src="logo gallery/Logo_Analyst_Green.png" alt="Logo_Analyst_Green">
+            <img id="l2" class="logo-to-get" src="logo gallery/Logo_Caffee_Yellow_Handrawn.png" alt="Logo_Caffee_Yellow_Handrawn">
+            <img id="l3" class="logo-to-get" src="logo gallery/Logo_HairBeauty_red.png" alt="Logo_HairBeauty_red">
+            <img id="l4" class="logo-to-get" src="logo gallery/Logo_handrawn_Butcher_red.png" alt="Logo_handrawn_Butcher_red">
+            <img id="l5" class="logo-to-get" src="logo gallery/Logo_handrawn_Gardener_green.png" alt="Logo_handrawn_Gardener_green">
+            <img id="l6" class="logo-to-get" src="logo gallery/Logo_handrawn_Healthmedical_red.png" alt="Logo_handrawn_Healthmedical_red">
+            <img id="l7" class="logo-to-get" src="logo gallery/Logo_handrawn_Legal_light-blue.png" alt="Logo_handrawn_Legal_light-blue">
+            <img id="l8" class="logo-to-get" src="logo gallery/Logo_CallCenter.png" alt="Logo_CallCenter">
+            <img id="l9" class="logo-to-get" src="logo gallery/Logo_HandymanRepairs.png" alt="Logo_HandymanRepairs">
+            <img id="l10" class="logo-to-get" src="logo gallery/Logo_handrawn_Personal-Assistence_green.png" alt="Logo_handrawn_Personal-Assistence_green">
+            <img id="l11" class="logo-to-get" src="logo gallery/Logo_handrawn_Repair-man_light-blue.png" alt="Logo_handrawn_Repair-man_light-blue">
+            <img id="l12" class="logo-to-get" src="logo gallery/Logo_handrawn_Builder_orange.png" alt="Logo_handrawn_Builder_orange">
 
         </div>
+        <div id="cover"></div>
 
     </div>
     <footer></footer>
-
+    
+    
+    
+    <!-- DO GENEROWANIA PDF:
+    var doc = new jsPDF();
+    doc.text('Hello world!', 10, 10);
+    doc.save('a4.pdf');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script> -->
 </body>
-
 </html>
