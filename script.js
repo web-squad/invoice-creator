@@ -12,6 +12,8 @@ function addLogoClickListener(logos) {
 }
 
 function getSrc() {
+    document.getElementById("logo-gallery").style.display = "none";
+    document.getElementById("cover").style.display = "none";
     return this.getAttribute("src");
 }
 
