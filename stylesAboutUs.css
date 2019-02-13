@@ -1,0 +1,47 @@
+#content-aboutUs {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 5%;
+    margin-top: 2%;
+    padding: 2%;
+    background-color: #F3C47F;
+    border-radius: 1%;
+
+}
+h3 {
+    padding: 2%;
+    margin-top: 3%;
+}
+#welcome-part p {
+    padding: 2%;
+}
+
+#img-descr {
+    width: 50%;
+} 
+
+
+#about-us-descr {
+    width: 40%;
+}
+#about-us-img {
+    width: 50%;
+}
+
+
+#about-us-container, #contact-us-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5vw;
+}
+
+
+#about-us-img img {
+    max-width:100%;
+    height: auto;
+}
+#about-us-descr p {
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 180%;
+}

@@ -46,6 +46,16 @@ a {
 a:hover, .active {
     color: #F3C47F;
 }
+h1{
+    padding-left: 2%;
+    padding-top: 1%;
+    margin-bottom: 0;
+}
+p {
+    width: 80%;
+    text-align: justify;
+}
+
 .invisible {
     visibility: hidden;
 }
@@ -70,7 +80,6 @@ label {
     color: #535353;
     padding: 10px;
 }
-
 #item-area {
     background-color: rgb(253, 210, 146);
 }
@@ -81,7 +90,6 @@ label {
     flex-wrap: wrap;
     padding: 2%;
 }
-
 #logo-date {
     margin-top: 5%;
 }
@@ -112,18 +120,9 @@ input,textarea {
     flex-direction: column;
     padding: 2%;
 }
-h1{
-    padding-left: 2%;
-    padding-top: 1%;
-    margin-bottom: 0;
-}
+
 #add-item {
     width: 100%;
-}
-
-footer {
-    padding: 1%;
-    padding-left: 5%;
 }
 #add-new {
     cursor: pointer;
@@ -199,13 +198,15 @@ img {
 #sp-buttons button:hover {
     background-color: #e7830080;
 }
-
+button:focus {
+    outline:0;
+}
 #summary {
     font-weight: 800;
 }
-button:focus {outline:0;}
-.active {
-    color:
+footer {
+    padding: 1%;
+    padding-left: 5%;
 }
 
 
