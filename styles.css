@@ -43,19 +43,22 @@ header {
 a {
     color: #6d6e71;
 }
-a:hover {
-    color: 32830352;
+a:hover, .active {
+    color: #F3C47F;
 }
 .invisible {
     visibility: hidden;
 }
-#content,#summary {
+#content, #summary {
     display: flex;
     flex-direction: column;
     margin: 0% 5%;
     margin-top: 2%;
     background-color: #F3C47F;
     border-radius: 1%;
+}
+#content {
+    padding: 2%;
 }
 input, textarea {
     border: none;
@@ -96,15 +99,21 @@ label {
 input {
     padding: 5%;
 }
-
-
+input,textarea {
+    width:100%;
+    display:block;
+}
+#item-area {
+    display: flex;
+    flex-wrap: nowrap;
+}
 #from-to, #logo-date, .form-group {
     display: flex;
     flex-direction: column;
     padding: 2%;
 }
 h1{
-    padding-left: 3%;
+    padding-left: 2%;
     padding-top: 1%;
     margin-bottom: 0;
 }
@@ -113,16 +122,23 @@ h1{
 }
 
 footer {
-    text-align: center;
-    color: #7a7676;
-    padding-bottom: 44px;
-    padding-top: 44px;
+    padding: 1%;
+    padding-left: 5%;
 }
 #add-new {
+    cursor: pointer;
+    border: none;
+    padding: 15px 32px;
     text-align: center;
-    padding: 1%;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
     background-color: #e78200;
 }
+#add-new-button {
+    margin: auto;
+}
+
 #add-new:hover {
     background-color: #e7830080;
 }
@@ -178,10 +194,21 @@ img {
 }
 #sp-buttons button {
     margin: 2%;
+    background-color: #e78200;
 }
+#sp-buttons button:hover {
+    background-color: #e7830080;
+}
+
 #summary {
     font-weight: 800;
 }
+button:focus {outline:0;}
+.active {
+    color:
+}
+
+
 
 
 

@@ -1,0 +1,19 @@
+#content-home {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 5%;
+    margin-top: 2%;
+    padding: 2%;
+    background-color: #F3C47F;
+    border-radius: 1%;
+    height:80vh;
+    width: auto;
+}
+h3 {
+    padding: 2%;
+    margin-top: 3%;
+}
+#welcome-part p {
+    padding: 2%;
+}
+
