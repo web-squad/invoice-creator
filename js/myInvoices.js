@@ -2,6 +2,10 @@ function handleEditClick(index) {
     window.location.replace("editInvoice.html#"+index);
 }
 
+function handlePrintClick(index){
+    window.location.replace("printInvoice.html#"+index);
+}
+
 function handleDeleteClick(index) {
     let invoices = JSON.parse(localStorage.getItem("invoices"));
     invoices.splice(index, 1);
@@ -29,7 +33,8 @@ for (let i=0; i < invoices.length; i++) {
     row.appendChild(buttonTd);
     let printButton = document.createElement("button");
     printButton.setAttribute("class", "button");
-    printButton.setAttribute("id", "print");
+    printButton.setAttribute("id", "print"+i);
+    printButton.addEventListener("click", function() { handlePrintClick(i) });
     printButton.setAttribute("type", "button");
     printButton.innerHTML = "Print";
     buttonTd.appendChild(printButton);
