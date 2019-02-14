@@ -10,6 +10,35 @@ window.onload = function () {
 
     let addNewItem = document.getElementById("add-item");
     addNewItem.addEventListener("click", handleAddNewItemClick);
+
+    var logos = document.getElementsByClassName("logo-to-get");
+    addLogoClickListener(logos);
+    document.getElementById("upload-logo").addEventListener("click", showGallery);
+
+    let now = new Date();
+    let dateDay = now.getDate();
+    let dateMonth = now.getMonth()+1;
+    let dateYear = now.getFullYear();
+    let invoiceDate = dateDay + "-" + dateMonth + "-" + dateYear;
+    document.getElementById("invoice-date").value = invoiceDate;
+}
+
+function addLogoClickListener(logos) {
+    for (var i = 0; i < logos.length; i++) {
+        var logo = logos[i];
+        logo.addEventListener("click", getSrc);
+    }
+}
+
+function getSrc() {
+    document.getElementById("logo-gallery").style.display = "none";
+    document.getElementById("cover").style.display = "none";
+    return this.getAttribute("src");
+}
+
+function showGallery() {
+    document.getElementById("logo-gallery").style.display = "flex";
+    document.getElementById("cover").style.display = "block";
 }
 
 function calculateTotal() {
@@ -27,16 +56,16 @@ let handleSaveClick = function () {
     if (JSON.parse(localStorage.getItem("invoices")) === null ) {
         let invoices = new Array();
         localStorage.setItem("invoices", JSON.stringify(invoices));
+        window.location.replace("myInvoices.html");
     }
     
     // read existing localStorage file
     let invoices = JSON.parse(localStorage.getItem("invoices"));
     
-    // read data for new invoice
+    // prepare data for new invoice
     let from = document.getElementById("from").value;
     let billTo = document.getElementById("to").value;
-    //let logo =  document.getElementById("upload-logo").value;
-    let invoiceDate = new Date();
+    let invoiceDate = document.getElementById("invoice-date").value;
     let termsAndConditions = document.getElementById("t&c").value;
     let items = new Array();
     let description = document.getElementById("description").value;
@@ -63,6 +92,7 @@ let handleSaveClick = function () {
     
     // save new invoice in localStorage
     localStorage.setItem("invoices", JSON.stringify(invoices));
+    window.location.replace("myInvoices.html");
 }
 
 let handlePriceOrAmountChange = function() {

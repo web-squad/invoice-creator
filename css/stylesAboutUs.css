@@ -1,0 +1,40 @@
+#content-aboutUs {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 5%;
+    margin-top: 2%;
+    padding: 2%;
+    background-color: white;
+}
+h3 {
+    padding: 2%;
+    margin-top: 3%;
+}
+#welcome-part p {
+    padding: 2%;
+}
+
+#about-us-descr {
+    width: 35%;
+}
+#about-us-img {
+    width: 60%;
+}
+
+
+#about-us-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+
+#about-us-img img {
+    max-width:100%;
+    height: auto;
+}
+#about-us-descr p {
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 180%;
+}

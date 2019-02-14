@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="script.js"></script>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/stylesHome.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invoice Creator Home</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -15,29 +14,38 @@
     <header>
         <div class="header">
             <div id="logo">
-                <a href="home.html">logo</a>
+                <a href="home.html"><img src="img/logo1.png" alt="logo"></a>
             </div>
-        </div>
+            <div id="main-nav">
+                <a class="active" href="home.html">Home</a>
+                <a href="myInvoices.html">My Invoices</a>
+                <a href="newInvoice.html">New Invoice</a>
+                <a href="clients.html">Clients</a>
+                <a href="aboutUs.html">About Us</a>
+            </div>
     </header>
 
-    <div id="content">
+    <div id="content-home">
         <h1>Your best Invoice Creator!</h1>
-        
-        <div>
-            <h2>Invoice creator</h2>
-            <h3>Make your invoice fast and online</h3>
-            
-            <p>Welcome to original Invoice creator. You can save your regular costumer data and easly organize your invoices. Invoce creator lets you to print your invoice to PDF and download.</p>
+        <div id="welcome-part">
+            <h3>Create your invoice quick and easy!</h3>
 
-            <a href="invoiceCreator.html">Create your first invoice!</a>
+            <p>Let’s face it, invoices don’t seem like the most fun thing in the world to design,
+                but this doesn’t mean they’re not important. When you think about it, your invoice is
+                often your last point of contact with a client, the final physical (or digital) correspondence
+                you make with them at that point in time, so it’s important to leave them with a well-designed,
+                easily navigable, and beautiful invoice in order to make a stellar last impression.</p>
 
+            <p>In our original Invoice Creator you can make invoices, easly organize it and save your regular costumer data. 
+                Invoce Creator lets you also print and download your invoice.</p>
+        </div>
+        <div id="add-new-button">
+            <a href="newInvoice.html" id="add-new">Create your first invoice!</a>
         </div>
 
     </div>
     <footer>
-        <div>
-            <p>&copy;Powerd by: -> webDevSquad &lt-</p>
-        </div>
+        <p>&copy;Powerd by: webDevSquad</p>
     </footer>
 </body>
 
