@@ -18,15 +18,15 @@ window.onload = function () {
 
     today = mm + '/' + dd + '/' + yyyy;
 
-    let invoiceNum = 66
+    let invoiceNum = location.hash.split("#")[1];
     document.getElementById("invoice-number").innerHTML = "Invoice #: " + invoiceNum + "<br>Created: " + today + "<br>Due: 14 days";
     
     let invoices = JSON.parse(localStorage.getItem("invoices"));
     // debugger 
     // for (let i=0;i<invoices.length; i++){
     //     let name = invoices[i].billTo;
-    // }
-    let name = invoices[0].client.billTo;
+    // }    
+    let name = invoices[0].billTo;
 
     document.getElementById("customer").innerHTML = name;
     // printPage();
