@@ -1,3 +1,5 @@
+let logoSrc;
+
 window.onload = function () { 
     let saveButton = document.getElementById("save");
     saveButton.addEventListener("click", handleSaveClick);
@@ -33,6 +35,12 @@ function addLogoClickListener(logos) {
 function getSrc() {
     document.getElementById("logo-gallery").style.display = "none";
     document.getElementById("cover").style.display = "none";
+    // this will show logo to user and replace Upload button
+    // logoSrc = this.getAttribute("src");
+    // uploadButton = document.getElementById("upload-logo");
+    // uploadButton = document.createElement("img");
+    // uploadButton.src = logoSrc;
+    //
     return this.getAttribute("src");
 }
 
@@ -83,7 +91,7 @@ let handleSaveClick = function () {
     let invoice = {
         from,
         billTo,
-        //logo,
+        logoSrc,
         invoiceDate,
         items,
         termsAndConditions
