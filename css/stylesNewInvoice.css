@@ -81,3 +81,6 @@ input,textarea {
 #summary {
     font-weight: 800;
 }
+#summary p {
+    text-align: end;
+}
