@@ -26,7 +26,7 @@ window.onload = function () {
     // for (let i=0;i<invoices.length; i++){
     //     let name = invoices[i].billTo;
     // }
-    let name = invoices[0].billTo;
+    let name = invoices[0].client.billTo;
 
     document.getElementById("customer").innerHTML = name;
     // printPage();
