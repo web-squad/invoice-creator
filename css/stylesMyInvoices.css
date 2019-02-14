@@ -3,13 +3,14 @@ table {
     width: 100%;
     margin: 5% 0%;
     margin-bottom: 9%;
+    table-layout: fixed ;
+    width: 100% 
 }
 th, td {
     padding: 8px;
     text-align: left;
     border: none;
 }
-
 tr {
     display: flex;
     justify-content: space-around;
@@ -24,4 +25,7 @@ tr {
     height:80vh;
     width: auto;
     padding: 2%;
+}
+td {
+    width: 25% ;
 }

@@ -119,79 +119,68 @@ let handleAddNewItemClick = function() {
     let newItem = document.createElement("div");
     newItem.setAttribute("class", "item");
     newItem.setAttribute("id", "item-area");
+
+    let formGroup1 = document.createElement("div");
+    formGroup1.setAttribute("class", "form-group");
+    let label1 = document.createElement("label");
+    label1.setAttribute("for", "description");
+    label1.innerText = "Description";
+    let textarea1 = document.createElement("textarea");
+    textarea1.setAttribute("id", "description");
+    textarea1.setAttribute("rows", "8");
+    textarea1.setAttribute("cols", "50");
+    formGroup1.appendChild(label1);
+    formGroup1.appendChild(textarea1);
+    newItem.appendChild(formGroup1);
+
+    let formGroup2 = document.createElement("div");
+    formGroup2.setAttribute("class", "form-group");
+    let label2 = document.createElement("label");
+    label2.setAttribute("for", "amount");
+    label2.innerText = "Amount";
+    let input2 = document.createElement("input");
+    input2.setAttribute("id", "amount");
+    formGroup2.appendChild(label2);
+    formGroup2.appendChild(input2);
+    newItem.appendChild(formGroup2);
+
+    let formGroup3 = document.createElement("div");
+    formGroup3.setAttribute("class", "form-group");
+    let label3 = document.createElement("label");
+    label3.setAttribute("for", "price");
+    label3.innerText = "Price";
+    let input3 = document.createElement("input");
+    input3.setAttribute("id", "price");
+    formGroup3.appendChild(label3);
+    formGroup3.appendChild(input3);
+    newItem.appendChild(formGroup3);
+
+    let formGroup4 = document.createElement("div");
+    formGroup4.setAttribute("class", "form-group");
+    let label4 = document.createElement("label");
+    label4.setAttribute("for", "add-tax");
+    label4.innerText = "Tax";
+    let input4 = document.createElement("input");
+    input4.setAttribute("id", "add-taxe");
+    formGroup4.appendChild(label4);
+    formGroup4.appendChild(input4);
+    newItem.appendChild(formGroup4);
+
+    let formGroup5 = document.createElement("div");
+    formGroup5.setAttribute("class", "form-group");
+    let label5 = document.createElement("label");
+    label5.setAttribute("class", "invisible");
+    label5.innerText = " ";
+    let botton5 = document.createElement("button");
+    botton5.setAttribute("class", "button");
+    botton5.setAttribute("id", "delete-item");
+    botton5.setAttribute("type", "button");
+    botton5.innerText = "Delete Item";
+    formGroup5.appendChild(label5);
+    formGroup5.appendChild(botton5);
+    newItem.appendChild(formGroup5);
+
     items.appendChild(newItem);
-
-    // generate Description Text field
-    let nDescriptionNode = document.createElement("div");
-    nDescriptionNode.setAttribute("class", "form-group");
-    let nDescriptionLabel = document.createElement("label");
-    nDescriptionLabel.setAttribute("for", "description");
-    nDescriptionLabel.innerHTML = "Description";
-    nDescriptionNode.append(nDescriptionLabel);
-    let nDescriptionInput = document.createElement("textarea");
-    nDescriptionInput.setAttribute("rows", "8");
-    nDescriptionInput.setAttribute("cols", "50");
-    nDescriptionInput.setAttribute("id", "description");
-    nDescriptionNode.append(nDescriptionInput);
-    items.appendChild(nDescriptionNode);
-    document.getElementById("items").appendChild(nDescriptionNode);
-    
-    // generate Amount Text field
-    let nAmount = document.createElement("div");
-    nAmount.setAttribute("class", "form-group");
-    let nAmountLabel = document.createElement("label");
-    nAmountLabel.setAttribute("for", "amount");
-    nAmountLabel.innerHTML = "Amount";
-    nAmount.append(nAmountLabel);
-    let nAmountInput = document.createElement("input");
-    nAmountInput.setAttribute("id", "amount");
-    nAmount.append(nAmountInput);
-    items.appendChild(nAmount);
-    document.getElementById("items").appendChild(nAmount);
-
-    // generate Price Text field
-    let nPrice = document.createElement("div");
-    nPrice.setAttribute("class", "form-group");
-    let nPriceLabel = document.createElement("label");
-    nPriceLabel.setAttribute("for", "price");
-    nPriceLabel.innerHTML = "Price";
-    nPrice.append(nPriceLabel);
-    let nPriceInput = document.createElement("input");
-    nPriceInput.setAttribute("id", "price");
-    nPrice.append(nPriceInput);
-    items.appendChild(nPrice);
-    document.getElementById("items").appendChild(nPrice);
-   
-
-    // generate Tax Text field
-    let nTax = document.createElement("div");
-    nTax.setAttribute("class", "form-group");
-    let nTaxLabel = document.createElement("label");
-    nTaxLabel.setAttribute("for", "add-tax");
-    nTaxLabel.innerHTML = "Tax";
-    nTax.append(nTaxLabel);
-    let nTaxInput = document.createElement("input");
-    nTaxInput.setAttribute("id", "add-tax");
-    nTaxInput.setAttribute("value", "23%");
-    nTax.append(nTaxInput);
-    items.appendChild(nTax);
-    document.getElementById("items").appendChild(nTax);
-
-    //generate Delete button
-    let nButton = document.createElement("div");
-    nButton.setAttribute("class", "form-group");
-    let nDeleteButtonLabel = document.createElement("label");
-    nDeleteButtonLabel.setAttribute("class", "invisible");
-    nDeleteButtonLabel.innerHTML = " ";
-    nButton.append(nDeleteButtonLabel);
-    let nDeleteButton = document.createElement("button");
-    nDeleteButton.setAttribute("class", "button");
-    nDeleteButton.setAttribute("id", "delete-item");
-    nDeleteButton.setAttribute("type", "button");
-    nDeleteButton.innerHTML = "Delete Item";
-    nButton.append(nDeleteButton);
-    items.appendChild(nButton);
-    document.getElementById("items").appendChild(nButton);
 }
 
 // <!-- DO GENEROWANIA PDF: -->
