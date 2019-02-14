@@ -14,6 +14,13 @@ window.onload = function () {
     var logos = document.getElementsByClassName("logo-to-get");
     addLogoClickListener(logos);
     document.getElementById("upload-logo").addEventListener("click", showGallery);
+
+    let now = new Date();
+    let dateDay = now.getDate();
+    let dateMonth = now.getMonth()+1;
+    let dateYear = now.getFullYear();
+    let invoiceDate = dateDay + "-" + dateMonth + "-" + dateYear;
+    document.getElementById("invoice-date").value = invoiceDate;
 }
 
 function addLogoClickListener(logos) {
@@ -28,7 +35,6 @@ function getSrc() {
     document.getElementById("cover").style.display = "none";
     return this.getAttribute("src");
 }
-
 
 function showGallery() {
     document.getElementById("logo-gallery").style.display = "flex";
@@ -50,16 +56,16 @@ let handleSaveClick = function () {
     if (JSON.parse(localStorage.getItem("invoices")) === null ) {
         let invoices = new Array();
         localStorage.setItem("invoices", JSON.stringify(invoices));
+        window.location.replace("myInvoices.html");
     }
     
     // read existing localStorage file
     let invoices = JSON.parse(localStorage.getItem("invoices"));
     
-    // read data for new invoice
+    // prepare data for new invoice
     let from = document.getElementById("from").value;
     let billTo = document.getElementById("to").value;
-    //let logo =  document.getElementById("upload-logo").value;
-    let invoiceDate = new Date();
+    let invoiceDate = document.getElementById("invoice-date").value;
     let termsAndConditions = document.getElementById("t&c").value;
     let items = new Array();
     let description = document.getElementById("description").value;
@@ -86,6 +92,7 @@ let handleSaveClick = function () {
     
     // save new invoice in localStorage
     localStorage.setItem("invoices", JSON.stringify(invoices));
+    window.location.replace("myInvoices.html");
 }
 
 let handlePriceOrAmountChange = function() {
@@ -99,7 +106,84 @@ let handlePriceOrAmountChange = function() {
 }
 
 let handleAddNewItemClick = function() {
+    let items = document.getElementById("items");
+
+    let newItem = document.createElement("div");
+    newItem.setAttribute("class", "item");
+    newItem.setAttribute("id", "item-area");
+    items.appendChild(newItem);
+
+    // generate Description Text field
+    let nDescriptionNode = document.createElement("div");
+    nDescriptionNode.setAttribute("class", "form-group");
+    let nDescriptionLabel = document.createElement("label");
+    nDescriptionLabel.setAttribute("for", "description");
+    nDescriptionLabel.innerHTML = "Description";
+    nDescriptionNode.append(nDescriptionLabel);
+    let nDescriptionInput = document.createElement("textarea");
+    nDescriptionInput.setAttribute("rows", "8");
+    nDescriptionInput.setAttribute("cols", "50");
+    nDescriptionInput.setAttribute("id", "description");
+    nDescriptionNode.append(nDescriptionInput);
+    items.appendChild(nDescriptionNode);
+    document.getElementById("items").appendChild(nDescriptionNode);
     
+    // generate Amount Text field
+    let nAmount = document.createElement("div");
+    nAmount.setAttribute("class", "form-group");
+    let nAmountLabel = document.createElement("label");
+    nAmountLabel.setAttribute("for", "amount");
+    nAmountLabel.innerHTML = "Amount";
+    nAmount.append(nAmountLabel);
+    let nAmountInput = document.createElement("input");
+    nAmountInput.setAttribute("id", "amount");
+    nAmount.append(nAmountInput);
+    items.appendChild(nAmount);
+    document.getElementById("items").appendChild(nAmount);
+
+    // generate Price Text field
+    let nPrice = document.createElement("div");
+    nPrice.setAttribute("class", "form-group");
+    let nPriceLabel = document.createElement("label");
+    nPriceLabel.setAttribute("for", "price");
+    nPriceLabel.innerHTML = "Price";
+    nPrice.append(nPriceLabel);
+    let nPriceInput = document.createElement("input");
+    nPriceInput.setAttribute("id", "price");
+    nPrice.append(nPriceInput);
+    items.appendChild(nPrice);
+    document.getElementById("items").appendChild(nPrice);
+   
+
+    // generate Tax Text field
+    let nTax = document.createElement("div");
+    nTax.setAttribute("class", "form-group");
+    let nTaxLabel = document.createElement("label");
+    nTaxLabel.setAttribute("for", "add-tax");
+    nTaxLabel.innerHTML = "Tax";
+    nTax.append(nTaxLabel);
+    let nTaxInput = document.createElement("input");
+    nTaxInput.setAttribute("id", "add-tax");
+    nTaxInput.setAttribute("value", "23%");
+    nTax.append(nTaxInput);
+    items.appendChild(nTax);
+    document.getElementById("items").appendChild(nTax);
+
+    //generate Delete button
+    let nButton = document.createElement("div");
+    nButton.setAttribute("class", "form-group");
+    let nDeleteButtonLabel = document.createElement("label");
+    nDeleteButtonLabel.setAttribute("class", "invisible");
+    nDeleteButtonLabel.innerHTML = " ";
+    nButton.append(nDeleteButtonLabel);
+    let nDeleteButton = document.createElement("button");
+    nDeleteButton.setAttribute("class", "button");
+    nDeleteButton.setAttribute("id", "delete-item");
+    nDeleteButton.setAttribute("type", "button");
+    nDeleteButton.innerHTML = "Delete Item";
+    nButton.append(nDeleteButton);
+    items.appendChild(nButton);
+    document.getElementById("items").appendChild(nButton);
 }
 
 // <!-- DO GENEROWANIA PDF: -->
