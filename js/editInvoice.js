@@ -18,6 +18,7 @@ window.onload = function () {
     let index = location.hash.split("#")[1];
     let invoice = JSON.parse(localStorage.getItem("invoices"))[index];
     document.getElementById("from").innerText = invoice.from;
+    // --------------------------------------------------- tutaj zrobic aby dodawalo sie z enterami do formularza
     document.getElementById("to").innerText = invoice.billTo;
     document.getElementById("description").innerText = invoice.items[0].description;
     document.getElementById("price").value = invoice.items[0].price;

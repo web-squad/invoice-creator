@@ -17,7 +17,7 @@ for (let i=0; i < invoices.length; i++) {
     table.appendChild(row);
     let invoiceId = document.createElement("td");
     row.appendChild(invoiceId);
-    invoiceId.innerHTML = i;
+    invoiceId.innerHTML = i+1; //+1 is here just for user to see numbers starting from 1 not from 0
     let companyName = document.createElement("td");
     row.appendChild(companyName);
     companyName.innerHTML = invoices[i].from;
