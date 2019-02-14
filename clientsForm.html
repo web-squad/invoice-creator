@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="script.js"></script>
+    <script src="js/clientsForm.js"></script>
 </head>
 <body>
     <header>
@@ -16,9 +16,14 @@
             <div id="logo">
                 <a href="home.html"><img src="logo1.png" alt="logo"></a>
             </div>
-        </div>
+            <div id="main-nav">
+                <a href="myInvoices.html">My Invoices</a>
+                <a href="newInvoice.html">New Invoice</a>
+                <a class="active" href="clients.html">Clients</a>
+                <a href="aboutUs.html">About Us</a>
+            </div>
     </header>
-    <div class="content">
+    <div id="content">
         <h1>Create new Client</h1>
 
         <div class="formulage">
@@ -67,9 +72,9 @@
                     </div>
                 </fieldset>
             </form>
-            <button class="button" id="save" type="button" onclick="sendRandomInfo()">Add Client</button>
+            <button class="button" id="save" type="button" >Add Client</button>
         </div>
     </div>
-    
+  
 </body>
 </html>

@@ -8,21 +8,26 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="main.js"></script>
+    
 </head>
 <body>
     <header>
         <div class="header">
             <div id="logo">
-                <a href="home.html"><img src="logo1.png" alt="logo"></a></a>
+                <a href="home.html"><img src="logo1.png" alt="logo"></a>
             </div>
-        </div>
+            <div id="main-nav">
+                <a href="myInvoices.html">My Invoices</a>
+                <a href="newInvoice.html">New Invoice</a>
+                <a class="active" href="clients.html">Clients</a>
+                <a href="aboutUs.html">About Us</a>
+            </div>
     </header>
 
     <div id="content">
         <h1>Clients</h1>
         <div id = "content" style="overflow-x: auto">
-            <table>
+            <table id="clientsTable">
                 <tr class="table-title">
                     <th class="table-title">Id</th>
                     <th class="table-title">Name</th>
@@ -33,7 +38,7 @@
                     <th class="table-title"></th>
                     <th class="table-title"></th>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>1</td>
                     <td>Tomasz</td>
                     <td>Calik</td>
@@ -62,11 +67,12 @@
                     <td>Onet.pl</td>
                     <td><button class="glyphicon glyphicon-pencil" id="edit" type="button"></button></td>
                     <td><button class="glyphicon glyphicon-trash" id="delete" type="button"></button></td>
-                </tr>
+                </tr> -->
             </table>
             <a href="clientsForm.html"><button class="button" id="addClient" type="button">Add New Client</button></a>
         </div>
     </div>
+    <script src="js/clients.js"></script>
     <footer></footer>
 </body>
 </html>
