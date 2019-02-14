@@ -34,7 +34,12 @@
 }
 
 .invoice-box table tr.information table td {
-    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+#conditions {
+    padding-top: 20em;
+    float: left;
 }
 
 .invoice-box table tr.heading td {
