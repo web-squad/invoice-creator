@@ -47,6 +47,7 @@ function getSrc() {
     // uploadButton = document.createElement("img");
     // uploadButton.src = logoSrc;
     //
+    logoSrc = this.getAttribute("src");
     return this.getAttribute("src");
 }
 
