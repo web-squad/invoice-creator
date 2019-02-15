@@ -43,10 +43,15 @@ input,textarea {
     display: flex;
     flex-wrap: nowrap;
 }
-#from-to, #logo-date, .form-group {
+#from-to, .form-group {
     display: flex;
     flex-direction: column;
     padding: 2%;
+}
+#logo-date {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
 }
 
 #add-item {
