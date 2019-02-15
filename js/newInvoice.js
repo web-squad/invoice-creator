@@ -47,7 +47,11 @@ function getSrc() {
     // uploadButton = document.createElement("img");
     // uploadButton.src = logoSrc;
     //
-    logoSrc = this.getAttribute("src");
+    let logodiv = document.getElementById("logo-div");
+    let img = document.createElement("img");
+    img.setAttribute("class", "logo-to-get");
+    img.setAttribute("src", this.getAttribute("src"));
+    logodiv.appendChild(img);
     return this.getAttribute("src");
 }
 
@@ -151,7 +155,7 @@ let handleAddNewItemClick = function() {
 
     let newItem = document.createElement("div");
     newItem.setAttribute("class", "item");
-    newItem.setAttribute("id", "item-area"+currentHighestItemIndex);
+    newItem.setAttribute("id", "item-area");
 
     itemIds.push(currentHighestItemIndex);
 

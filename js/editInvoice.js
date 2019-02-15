@@ -39,6 +39,11 @@ function addLogoClickListener(logos) {
 function getSrc() {
     document.getElementById("logo-gallery").style.display = "none";
     document.getElementById("cover").style.display = "none";
+    let logodiv = document.getElementById("logo-div");
+    let img = document.createElement("img");
+    img.setAttribute("class", "logo-to-get");
+    img.setAttribute("src", this.getAttribute("src"));
+    logodiv.appendChild(img);
     return this.getAttribute("src");
 }
 
