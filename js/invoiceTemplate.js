@@ -19,11 +19,12 @@ window.onload = function () {
     today = mm + '/' + dd + '/' + yyyy;
 
     let invoiceNum = location.hash.split("#")[1];
+    let invoPrintNum = Number(invoiceNum)+1;
 
     let invoices = JSON.parse(localStorage.getItem("invoices"));
     
     let invoiceDate = invoices[invoiceNum].invoiceDate;
-    document.getElementById("invoice-number").innerHTML = "Invoice #: " + invoiceNum + "<br>Created: " + invoiceDate + "<br>Due: 14 days";
+    document.getElementById("invoice-number").innerHTML = "Invoice #: " + invoPrintNum + "<br>Created: " + invoiceDate + "<br>Due: 14 days";
     
     // debugger   
 
@@ -55,7 +56,10 @@ window.onload = function () {
     let conditions = invoices[invoiceNum].termsAndConditions;
     document.getElementById("conditions").innerHTML = "<strong>Additional terms and conditions:</strong><br>"+conditions;
 
-    // printPage();
+    let newLogoSrc = invoices[invoiceNum].items[0].logoSrc;
+    document.getElementById("logo").innerHTML = <img src="newLogoSrc"></img>;
+    
+    printPage();
 }
 
 function printPage (){
