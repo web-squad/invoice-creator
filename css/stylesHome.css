@@ -8,11 +8,19 @@
     height:80vh;
     width: auto;
 }
-h3 {
-    padding: 2%;
-    margin-top: 3%;
-}
 #welcome-part p {
     padding: 2%;
+    text-align: center;
+}
+
+#welcome-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+}
+#home-heading {
+    text-align: center;
+    padding: 0;
 }
 
