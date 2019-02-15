@@ -56,10 +56,14 @@ window.onload = function () {
     let conditions = invoices[invoiceNum].termsAndConditions;
     document.getElementById("conditions").innerHTML = "<strong>Additional terms and conditions:</strong><br>"+conditions;
 
-    let newLogoSrc = invoices[invoiceNum].items[0].logoSrc;
-    document.getElementById("logo").innerHTML = <img src="newLogoSrc"></img>;
+    let newLogoSrc = invoices[invoiceNum].logoSrc;
+    // debugger
+    if (newLogoSrc == undefined){
+        newLogoSrc = img/logo1.png
+        document.getElementById("logo").setAttribute('src',newLogoSrc);
+    };
     
-    printPage();
+    // printPage();
 }
 
 function printPage (){
