@@ -1,24 +1,53 @@
-window.onload = function () {
-    // document.getElementById("print").addEventListener("click",printPage);
+function getFromLocalStorage (arrInfo, invoiceNum , elemKey){
+    return arrInfo[invoiceNum].elemKey;
+}
+
+function getItemFromLocalStorage () {
+    return ;
+}
+
+function modifyHTML () {
+    return ;
+}
+
+function createItems (invoices, invoiceNum) {
     
-    // generate HTML invoice
+    // let items = invoices[invoiceNum].items;
+    
+    let table = document.getElementById("table");
 
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1; //January is 0!
-    var yyyy = today.getFullYear();
+    for (let i=0; invoices[invoiceNum].items.length;++i) {
 
-    if(dd<10) {
-        dd = '0'+dd
-    } 
+        let row = document.createElement("tr");
+        table.appendChild(row);
+        row.setAttribute("class","item");
 
-    if(mm<10) {
-        mm = '0'+mm
-    } 
+        let descItem = document.createElement("td");
+        descItem.setAttribute("id","descItem");
+        row.appendChild(descItem);
+        descItem.innerHTML = invoices[invoiceNum].items[i].description;
 
-    today = mm + '/' + dd + '/' + yyyy;
+        let itemAmount = document.createElement("td");
+        itemAmount.setAttribute("id","itemAmount");
+        row.appendChild(itemAmount);
+        itemAmount.innerHTML = invoices[invoiceNum].items[i].amount;
 
-    let invoiceNum = location.hash.split("#")[1];
+        let itemPrice = document.createElement("td");
+        itemPrice.setAttribute("id","itemPrice");
+        row.appendChild(itemPrice);
+        itemPrice.innerHTML = invoices[invoiceNum].items[i].price;
+
+        let itemTax = document.createElement("td");
+        itemTax.setAttribute("id","itemTax");
+        row.appendChild(itemTax);
+        itemTax.innerHTML = invoices[invoiceNum].items[i].tax;
+
+    }
+}
+
+window.onload = function () {
+
+    let invoiceNum = location.hash.split("#")[1]
     let invoPrintNum = Number(invoiceNum)+1;
 
     let invoices = JSON.parse(localStorage.getItem("invoices"));
@@ -26,40 +55,40 @@ window.onload = function () {
     let invoiceDate = invoices[invoiceNum].invoiceDate;
     document.getElementById("invoice-number").innerHTML = "Invoice #: " + invoPrintNum + "<br>Created: " + invoiceDate + "<br>Due: 14 days";
     
-    // debugger   
-
     let customerName = invoices[invoiceNum].billTo;
+    // let customerName = getFromLocalStorage(invoices, invoiceNum, billTo);
     document.getElementById("customer").innerHTML = customerName;
 
-    let dealerName = invoices[invoiceNum].from;
-    document.getElementById("dealer").innerHTML = dealerName;
+    // let dealerName = invoices[invoiceNum].from;
+    // document.getElementById("dealer").innerHTML = dealerName;
 
-    // for (let i=0;i<invoices.length; i++){
-    //     let name = invoices[i].billTo;
-    // } 
+    // let descItem = invoices[invoiceNum].items[0].description;
+    // document.getElementById("descItem").innerHTML = descItem;
 
-    let descItem = invoices[invoiceNum].items[0].description;
-    document.getElementById("descItem").innerHTML = descItem;
+    // let itemAmount = invoices[invoiceNum].items[0].amount;
+    // document.getElementById("itemAmount").innerHTML = itemAmount;
 
-    let itemAmount = invoices[invoiceNum].items[0].amount;
-    document.getElementById("itemAmount").innerHTML = itemAmount;
+    // let itemPrice = invoices[invoiceNum].items[0].price;
+    // document.getElementById("itemPrice").innerHTML = itemPrice;
 
-    let itemPrice = invoices[invoiceNum].items[0].price;
-    document.getElementById("itemPrice").innerHTML = itemPrice;
-
-    let itemTax = invoices[invoiceNum].items[0].tax;
-    document.getElementById("itemTax").innerHTML = itemTax;
+    // let itemTax = invoices[invoiceNum].items[0].tax;
+    // document.getElementById("itemTax").innerHTML = itemTax;
+    createItems(invoices,invoiceNum);
 
     let totalPrice = invoices[invoiceNum].items[0].price;
     document.getElementById("totalPrice").innerHTML = "<strong>Total: $"+totalPrice+"<strong>";
 
     let conditions = invoices[invoiceNum].termsAndConditions;
-    document.getElementById("conditions").innerHTML = "<strong>Additional terms and conditions:</strong><br>"+conditions;
+    if (conditions != ""){
+        document.getElementById("conditions").innerHTML = "<strong>Additional terms and conditions:</strong><br>"+conditions;
+    }
+
 
     let newLogoSrc = invoices[invoiceNum].logoSrc;
-    // debugger
-    if (newLogoSrc == undefined){
-        newLogoSrc = img/logo1.png
+    if (newLogoSrc === undefined){
+        newLogoSrc = "img/logo1.png";
+        document.getElementById("logo").setAttribute('src',newLogoSrc);
+    } else {
         document.getElementById("logo").setAttribute('src',newLogoSrc);
     };
     
@@ -68,4 +97,28 @@ window.onload = function () {
 
 function printPage (){
     window.print();  
+}
+
+// Function below are not used!
+function calendar () {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        addZero(dd);
+    } 
+
+    if(mm<10) {
+        addZero(mm);
+    } 
+
+    today = mm + '/' + dd + '/' + yyyy;
+    return today;
+}
+
+function addZero (num) {
+    let numWithZero = '0' + num;
+    return numWithZero;
 }
